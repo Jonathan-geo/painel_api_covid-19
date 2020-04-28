@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Painel COVID-19</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="../../public/css/chart.css">
+    <link rel="shortcut icon" href="../../public/img/grafico.png" />
+</head>
+<body>
+    <div class="container">
+        <!--uma coluna-->
+        <div class="row">
+            <div class="col col-content1">
+                <div class="card-total-informe">
+                    <div class="font-letra">Painel</div>
+                    <div class="font-letra-titulo">COVID-19</div>
+                </div>
+            </div>
+
+            <div class="col col-sidebar1">
+                <div class="card-total-sobre">
+                    <div class="input-wrapper">
+                        <div class="card-grp">
+                            <div class="card-input">Sobre o Desenvolvedor</div>
+                            <div class="arrow">
+                                <i class="fas fa-caret-down fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="card-total-sobre-foto card-list">
+                            <img class="img-perfil" src="../../public/img/perfil.jpg" alt="">
+                            <p>Jonathan C. Lopes Domingos</p>
+                            </br>
+                            <p>Desenvlvedor SW2 - SONDA</p>
+                            </br>
+                            <p>
+                                Olá, sou analista de dados e desenvolvedor de soluções para visualização de dashboards e
+                                tenho um grande apreço por python e javascript. 
+                            </p>
+
+                            </br>
+                            <p>Mais sobre mim:</p>
+                        </br>
+                            <button onclick="window.open('https://github.com/Jonathan-geo');">GITHUB</button>
+                            <button onclick="window.open('https://www.linkedin.com/in/jonathan-domingos-b98b76160/');">LINKEDIN</button>
+                            <button onclick="window.open('https://twitter.com/jonathan_cdso');">TWITTER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--Coluna com sidebar PARTE 1-->
+        <div class="row">
+            <div class="col col-content1">
+                <div class="card-total-grafico">
+                    <select id="estadoSelectSP">
+                        <option value="Ssp">Dados Sem São Paulo </option>
+                        <option value="Csp">Dados Com São Paulo</option>
+                    </select>
+                
+                    <div id="pieChartContent2">
+                        <canvas id="grafico1" width="500" height="360"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-sidebar1">
+                <div class="card-total">
+                    <div id="numData" value="2020-10" class="numero"></div>
+                    <div class="font-letra">Data de Atualização</div>
+                </div>
+
+                <div class="card-total">
+                    <div id="numObitos" class="numero"></div>
+                    <div class="font-letra">Numero de Óbitos</div>
+                </div>
+                <div class="card-total">
+                    <div id="numConfirmados" class="numero"></div>
+                    <div class="font-letra">Casos Confirmados</div>
+                </div>
+                <div class="card-total-grafico-pie">
+                    <div id="pieChartContent3">
+                        <canvas id="grafico3" width="500" height="535"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--Coluna com sidebar PARTE 2-->
+        <div class="row">
+
+            <div class="col col-content">
+                <div class="card-total-grafico">
+                    <select id="estadoSelect">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                
+                
+                    <div id="pieChartContent">
+                        <canvas id="grafico2" width="300" height="277"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-sidebar">
+                <div class="card-total-grafico-table">
+                    <div id= "tableContent" class="scrollBar"></div>
+                </div>
+            </div>
+        </div> <!-- row -->
+
+        <div class="row">
+            <div class="col col">
+                <div class="card-total-informe">
+                    <p>Jonathan C. Lopes Domingos</p>
+                    <p>Desenvlvedor SW2 - SONDA</p>
+                    <button onclick="window.open('https://github.com/Jonathan-geo');">GITHUB</button>
+                    <button onclick="window.open('https://www.linkedin.com/in/jonathan-domingos-b98b76160/');">LINKEDIN</button>
+                    <button onclick="window.open('https://twitter.com/jonathan_cdso');">TWITTER</button>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- container -->
+
+    <script src="../../public/js/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" type="text/javascript"></script>
+    <script src="../../public/js/appChart.js" type="text/javascript"></script>
+</body>
+</html>
