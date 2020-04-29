@@ -113,7 +113,7 @@ function data(){
 function dadosDataAtual(data){
     var atualizado = [];
     for (var i = 0; i<data.length; i++){
-        if (data[i].data == '2020-04-27'){
+        if (data[i].data == '2020-04-28'){
             atualizado.push(data[i]);
         }
     }
@@ -142,7 +142,7 @@ function ordenarArrayGrafico1(atualizado){
 function dataObitosConfirmados(atualizado){
     var numData = document.getElementById('numData');
     numData.innerHTML = atualizado[0].data[8] + atualizado[0].data[9] + atualizado[0].data[7] + atualizado[0].data[5] + atualizado[0].data[6];
-
+    
     var obitosAcumuladosBrasil = 0;
     for (var i = 0; i<atualizado.length; i++){
         obitosAcumuladosBrasil = parseInt(obitosAcumuladosBrasil) + parseInt(atualizado[i].obitosAcumulados)
@@ -348,11 +348,11 @@ function grafico1pie(atualizado){
         
     }
 
-    console.log(Norte);
-    console.log(Nordeste);
-    console.log(Sudeste);
-    console.log(Sul);
-    console.log(Oeste);
+    // console.log(Norte);
+    // console.log(Nordeste);
+    // console.log(Sudeste);
+    // console.log(Sul);
+    // console.log(Oeste);
 
     var ctx = document.getElementById('grafico3').getContext('2d');
     var chart = new Chart(ctx, {
