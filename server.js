@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 //     return res.sendFile(__dirname + '/src/views/home.html');
 // });
 
-app.get('/covid', (req, res) => {
+app.get('/', (req, res) => {
     return res.sendFile(__dirname + '/src/views/covid.html');
 });
 
